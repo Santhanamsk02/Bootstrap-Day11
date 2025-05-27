@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Game</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      @media(min-width:300px) {
+        .img1,.img2
+        {
+          display: none;
+        }
+        .review3
+        {
+          min-height: 50vh;
+        }
+        
+      }
+      @media(min-width:1600px) {
+        .img1,.img2
+        {
+          display: block;
+        }
+      }
+      body
+      {
+        overflow-x: hidden;
+      }
+      .display-1,.display-2,.display-3,.display-4
+      {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 900 !important;
+        color: transparent;
+        background: #ffffff;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 54%, rgba(0, 0, 0, 1) 100%);
+        background-clip: text;
+
+      }
+      *
+    {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+    }
+      .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-wrapper
+    {
+      height: 100%;
+      width: 100% ;
+    }
+    .slideone {
+      background-position: center;
+      background-size: cover;
+      backdrop-filter: blur(10px);
+      width: 100vw;
+      height: 100vh;
+      display:  flex;
+      align-items: center;
+    }
+    
+    .slide1
+    {
+       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/slider/1.webp);
+    }
+    .slide2
+    {
+       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/slider/2.webp);
+    }.slide3
+    {
+       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/slider/3.webp);
+      
+    }.slide4
+    {
+       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/slider/4.webp);
+      
+    }
+    .btn
+    {
+      background: #9b2a8c;
+background: linear-gradient(90deg, rgba(155, 42, 140, 1) 0%, rgba(87, 113, 199, 1) 100%);
+color: white !important;
+    }
+    .pshade
+    {
+      color: transparent !important;
+        background: #9b2a8c;
+        background: linear-gradient(90deg, rgba(155, 42, 140, 1) 0%, rgba(87, 113, 199, 1) 100%);
+      background-clip:text ;
+      font-weight: 650 !important;
+    }
+    .bg1
+    {
+      background-position: center !important;
+      background-size: cover !important;
+      
+    }
+    #dot
+    {
+      height: 20px;
+      width: 20px;
+      border-radius: 100%;
+      display: inline-block;
+      background-color: blue;
+      margin-right: 10px;
+      animation: blink 700ms infinite both linear;
+    }
+    .img1
+    {
+      top:-135px;
+      height: 127%;
+      left:80px;
+    }
+    .img2
+    {
+        top:-135px;
+      height: 127%;
+      left:-90px;
+    }
+    @keyframes blink
+    {
+      0%
+      {
+        background-color: #ffffff;
+      }
+      100%
+      {
+        background-color: blue;
+      }
+    }
+    .slidetwo
+    {
+      height: 100%;
+      width: 350px;
+      background-color: #1e2021;
+      border-radius: 20px;
+    }
+    .pill
+    {
+      color: white;
+      border: 1px solid white;
+      display: inline;
+      padding: 7px;
+      padding-inline: 15px;
+      border-radius: 50px;
+    }
+    .gamesbg
+    {
+      min-height: 140vh;
+       background: url(images/background/3.webp) center/cover;
+
+    mask-image: linear-gradient(to bottom, transparent 0%, black 25%,black 85%, transparent 100%);
+    backdrop-filter: blur(7px);
+       background-size: cover;
+       background-position: center;
+    }
+    .btn:hover
+    {
+      box-shadow: 0px 0px 22px 1px rgb(132, 0, 255);
+    }
+    .game
+    {
+      height: 430px;
+      background-size: cover;
+      border-radius: 25px;
+      background-position: center;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .g1
+    {
+      background-image: url(images/covers/1.webp);
+    }
+    .g2
+    {
+      background-image: url(images/covers/2.webp);
+    }
+    .g3
+    {
+      background-image: url(images/covers/3.webp);
+    }
+    .g4
+    {
+      background-image: url(images/covers/4.webp);
+    }
+    .g5
+    {
+      background-image: url(images/covers/5.webp);
+    }  
+    .g6
+    {
+      background-image: url(images/covers/6.webp);
+    }  
+    .g7
+    {
+      background-image: url(images/covers/7.webp);
+    }  
+    .g8
+    {
+      background-image: url(images/covers/8.webp);
+    }
+    .blbg
+    {
+      background-color: #351f78;
+      font-weight: 550;
+    }
+    .popbtn
+    {
+
+    }
+    .animepopup
+    {
+      animation: popup 0.5s;
+    }
+    .animepopdown
+    {
+      animation: popdown 0.5s;
+    }
+    @keyframes popup
+    {
+      0%{
+        transform: translateY(100px);
+      }
+      100%
+      {
+        transform: translateY(0px);
+      }
+    }
+    @keyframes popdown
+    {
+      0%{
+        transform: translateY(0px);
+      }
+      100%
+      {
+        transform: translateY(100px);
+      }
+    }
+    .game:hover
+    {
+      cursor: pointer;
+      border: 6px solid #502dbd;
+    }
+    
+.accordion-button::after
+{
+display: none;
+}
+.accordion-button::before
+{
+  content: 'v';
+
+  font-weight: 700;
+  font-size: 22px;
+  padding: 3px;
+  padding-inline: 13px;
+  border-radius: 7px;
+  position: absolute;
+        background: #9b2a8c;
+background: linear-gradient(90deg, rgba(155, 42, 140, 1) 0%, rgba(87, 113, 199, 1) 100%);
+  right:20px;
+  
+}
+input::placeholder
+{
+  color: white !important;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+
+  <body class=" bg-black">
+    <header class="">
+      <nav class="navbar navbar-expand-lg fs-5 nav-underline text-light fixed-top top-0">
+        <div class=" container" >
+          <a href="#" class=" navbar-brand">
+              <img class=" img-fluid w-75" src="images/logo.png">
+          </a>
+          <div id="nav" class="offcanvas offcanvas-end bg-transparent" data-bs-scroll="true" style="backdrop-filter: blur(7px);" >
+              <div class=" offcanvas-header justify-content-end">
+                  <button class=" btn me-3 mt-3" data-bs-dismiss="offcanvas" style="border: 1px solid white !important;">
+                      <i class="bi bi-x-lg"></i>
+                  </button>
+              </div> 
+              <div class=" offcanvas-body navbar-nav justify-content-md-end gap-5 align-items-center" >
+                  <a class=" nav-link text-light">Home</a>
+                  <a class=" nav-link text-light">Game Servers</a>
+                  <a class=" nav-link text-light">Location</a>
+                  <a class=" nav-link text-light ">Support</a>
+                  <a class=" nav-link text-light ">News</a>
+                  <a class=" nav-link text-light ">Company</a>
+              </div>    
+            </div>
+              <button class="btn navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#nav" style="border: 1px solid white;">
+                <span class=" navbar-toggler-icon text-light"></span>
+              </button>
+                    
+          </div>
+            </nav>
+    </header>
+    <main >
+      <section style="min-height: 100vh;min-width: 100vw;">
+            <div class="swiper mySwiper">
+               <div class="swiper-wrapper text-light">
+                 <div class="swiper-slide slide1 slideone">
+                  <div class="container">
+                    <div class="col-lg-7 col-md-10 col-11 d-flex flex-column row-gap-4 align-items-start">
+                      <div class="fs-6 border border-1 border-light p-1 rounded-pill px-3 fw-bold d-flex align-items-center"><div id="dot"> </div>SERVERS ARE AVAILABLE</div>
+                      <div class="display-1 fw-bolder hero1">GALACTIC ODYSSEY</div>
+                      <div class="fs-6 hero2">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud delime.</div>
+                      <div class="fs-4 hero3">Starting At</div>
+                      <div class=" d-flex hero4"><span class="fs-4" style="color: blueviolet;">$<span class="display-1">165</span><span class="fs-4" style="color: blueviolet;">/Monthly</span></div>
+                      <button class=" btn fw-bold hero5">ORDER YOUR GAME SERVER</button>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="swiper-slide slide2 slideone">
+                   <div class="container">
+                    <div class="col-lg-7 col-md-10 col-11 d-flex flex-column row-gap-4 align-items-start">
+                      <div class="fs-6 border border-1 border-light p-1 rounded-pill px-3 fw-bold d-flex align-items-center"><div id="dot"> </div>SERVERS ARE AVAILABLE</div>
+                      <div class="display-1 fw-bolder ">MYSTIC RACING</div>
+                      <div class="fs-6">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud delime.</div>
+                      <div class="fs-4">Starting At</div>
+                      <div class=" d-flex"><span class="fs-4" style="color: blueviolet;">$<span class="display-1">165</span><span class="fs-4" style="color: blueviolet;">/Monthly</span></div>
+                      <button class=" btn fw-bold">ORDER YOUR GAME SERVER</button>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="swiper-slide slide3 slideone">
+                   <div class="container">
+                    <div class="col-lg-7 col-md-10 col-11 d-flex flex-column row-gap-4 align-items-start">
+                      <div class="fs-6 border border-1 border-light p-1 rounded-pill px-3 fw-bold d-flex align-items-center"><div id="dot"> </div>SERVERS ARE AVAILABLE</div>
+                      <div class="display-1 fw-bolder ">SILENT WRATH</div>
+                      <div class="fs-6">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud delime.</div>
+                      <div class="fs-4">Starting At</div>
+                      <div class=" d-flex"><span class="fs-4" style="color: blueviolet;">$<span class="display-1">165</span><span class="fs-4" style="color: blueviolet;">/Monthly</span></div>
+                      <button class=" btn fw-bold">ORDER YOUR GAME SERVER</button>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="swiper-slide slide4 slideone">
+                   <div class="container">
+                    <div class="col-lg-7 col-md-10 col-11 d-flex flex-column row-gap-4 align-items-start">
+                      <div class="fs-6 border border-1 border-light p-1 rounded-pill px-3 fw-bold d-flex align-items-center"><div id="dot"> </div>SERVERS ARE AVAILABLE</div>
+                      <div class="display-1 fw-bolder ">FUNK SPACE</div>
+                      <div class="fs-6">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud delime.</div>
+                      <div class="fs-4">Starting At</div>
+                      <div class=" d-flex"><span class="fs-4" style="color: blueviolet;">$<span class="display-1">165</span><span class="fs-4" style="color: blueviolet;">/Monthly</span></div>
+                      <button class=" btn fw-bold">ORDER YOUR GAME SERVER</button>
+                    </div>
+                  </div>
+                 </div>
+               </div>
+           <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <section style="min-height: 550vh;" class="pt-5">
+        <div class="container text-light pt-5 mt-3 d-flex flex-column align-items-start row-gap-3">
+            <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold feat1">INCREDIBLE FEATURES</span>
+            <div class=" display-2 feat2">PREMIUM GAME SERVER</div>
+        </div>
+        <div class="container my-5 py-4">
+            <div class="row mb-5 d-flex row-gap-4">
+            <div class="col-lg-3 col-md-6 col-12 pe-3 d-flex flex-column row-gap-3 align-items-start pb-3 feat3">
+              <img src="images/icons/1.png">
+              <div class="fs-5 text-light fw-bold">Super Quick Setup</div>
+              <div class=" text-secondary text-white-50">amet consectetur adipisicing elit. Maxime harum perspiciatis quia eveniet corrupti aperiam nemo libero ab pariatur officia.</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 pe-3 d-flex flex-column row-gap-3 align-items-start pb-3 feat4">
+              <img src="images/icons/2.png">
+              <div class="fs-5 text-light fw-bold">Premium Hardware</div>
+              <div class=" text-secondary text-white-50">amet consectetur adipisicing elit. Maxime harum perspiciatis quia eveniet corrupti aperiam nemo libero ab pariatur officia.</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 pe-3 d-flex flex-column row-gap-3 align-items-start pb-3 feat5">
+              <img src="images/icons/3.png">
+              <div class="fs-5 text-light fw-bold">DDO'S Protection</div>
+              <div class=" text-secondary text-white-50">amet consectetur adipisicing elit. Maxime harum perspiciatis quia eveniet corrupti aperiam nemo libero ab pariatur officia.</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 pe-3 d-flex flex-column row-gap-3 align-items-start pb-3 feat6">
+              <img src="images/icons/4.png">
+              <div class="fs-5 text-light fw-bold">Fast Support</div>
+              <div class=" text-secondary text-white-50">amet consectetur adipisicing elit. Maxime harum perspiciatis quia eveniet corrupti aperiam nemo libero ab pariatur officia.</div>
+            </div>
+          </div>
+        </div>
+        <div class=" container my-5 py-5">
+          <div class="row bg1 mt-5 text-light d-flex position-relative start0" style="min-height: 40vh;background: url(images/background/1.webp);">
+            <div class="col-xl-7 col-12 d-flex flex-column justify-content-center align-items-start ps-5 row-gap-3 py-5">
+              <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold start1">START YOUR GAME</span>
+              <div class="display-3 start2">UNLOCK YOUR GAMING<br>FULL POTENTIAL</div>
+              <div class="fs-5 text-white-50 start3">amet consectetur adipisicing elit. Harum, ullam. Modi officiis distinctio facilis ipsa, impedit qui doloribus perferendis nihil nobis dolorem unde aut. Soluta inventore voluptatum obcaecati quibusdam suscipit odio vitae, neque</div>
+              <button class="btn fw-bold start4">ORDER YOUR GAME SERVICES NOW</button>
+            </div>
+            <div class="col-xl-5 col-12 d-flex justify-content-end position-relative avatar">
+              <img src="images/misc/avatar.webp" class="position-absolute img1 start5">
+            </div>
+          </div>
+        </div>
+        <div class="container mt-5 pt-5">
+              <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold text-light review1">CUSTOMER REVIEWS</span>
+              <div class="display-3 mt-4 review2">4.85 Out of 5</div>
+        </div>
+        <div class="container-fluid my-4 mb-5 review3">
+          <div class="swiper mySwiper2">
+              <div class="swiper-wrapper text-light">
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png" class="">
+                  <p style="width: 300px;line-height: 30px;">"The boxer using Playhost for my game server needs, and I couldn't be happier. The server uptime is fantastic, and the customer support team is always quick to assist with any issues."</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/1.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Santhanam</div>
+                  </div>
+                </div>
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png">
+                  <p style="width: 300px;line-height: 30px;" class=" ">"Running a game server used to be a hassle, but Playhost makes it easy. The control panel is user-friendly, and I love how they handle server maintenance and updates."</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/2.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Niranjan</div>
+                  </div>
+                </div>
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png">
+                  <p style="width: 300px;line-height: 30px;" class=" ">"The tried several hosting providers in the past, and Playhost is by far the best. Their server performance is top-notch, and I've never experienced big white playing with friends."</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/3.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Praveen</div>
+                  </div>
+                </div>
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png">
+                  <p style="width: 300px;line-height: 30px;" class=" ">"As a new server owner, I was worried about acting and configuration, but Playhost made it a breeze. They have detailed tutorials and helpful support, which made the process smooth."</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/4.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Nagul Vishnu</div>
+                  </div>
+                </div>
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png">
+                  <p style="width: 300px;line-height: 30px;" class=" ">"The flexibility Playhost office is incredible. I can easily switch between game servers or even host multiple games on the same plan. It's a game's dream come true!"</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/5.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Ashwanth</div>
+                  </div>
+                </div>
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png">
+                  <p style="width: 300px;line-height: 30px;" class=" ">"I switched to Playhost after my old provider kept lagging during peak hours. The difference is night and day—smooth gameplay, zero downtime, and their support actually knows what they're doing!"</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/6.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Chandru</div>
+                  </div>
+                </div>
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png">
+                  <p style="width: 300px;line-height: 30px;" class=" ">"Playhost’s pricing is unbeatable for the quality they offer. I’ve tried cheaper hosts, but they always cut corners. Here, I get premium performance without breaking the bank."</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/7.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Priyaranjan</div>
+                  </div>
+                </div>
+                <div class="swiper-slide slidetwo p-4 d-flex flex-column justify-content-center align-items-start row-gap-4">
+                  <img src="images/5-Stars.png">
+                  <p style="width: 300px;line-height: 30px;" class=" ">"As a streamer, I need a reliable server for my community events. Playhost delivers—no crashes, no lag spikes, just pure gaming fun. My viewers have noticed the difference!"</p>
+                  <div class=" d-flex align-items-center column-gap-4">
+                    <img src="images/people/8.jpg" class=" rounded rounded-circle w-25">
+                    <div class=" text-white-50">Mani</div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="container mt-5 pt-5">
+          <div class="row mt-5 pt-5">
+            <div class="col-lg-6 col-12 d-flex align-items-center">
+              <img src="images/misc/server.webp" class="img img-fluid loc1">
+            </div>
+            <div class="col-lg-6 col-12 text-white-50 d-flex flex-column align-items-start row-gap-3">
+              <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold text-light loc2">SERVER LOCATIONS</span>
+              <div class="display-4 loc3" ><span class="pshade">25 </span>servers available<br> worldwide for your game.</div>
+              <div class="loc4" style="line-height: 32px;">Our collection of game server hosting options encompasses the most in-demand platforms of today. Within our offerings, you’ll discover an extensive array of specialized tools and features tailored to each game, all of which we diligently keep up to date in sync with game and mod updates.</div>
+              <div class=" d-flex flex-wrap row-gap-2 column-gap-3">
+                <div class="pill loc5">London, England</div>
+                <div class="pill  loc6">Paris, France</div>
+                <div class="pill  loc7">Frankfurt, Germany</div>
+                <div class="pill  loc8">Stockholm, Sweden</div>
+                <div class="pill  loc9">Helsinki, Finland</div>
+                <div class="pshade pill  loc10">View all available servers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid gamesbg mt-5 py-5" >
+          <div class="container d-flex justify-content-between mt-5 pt-5 flex-wrap">
+            <div class=" mt-5 pt-5">
+              <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold text-light mb-5 coll1">MOST COMPLETE</span>
+              <div class="display-4 mt-3 coll2">Game Collection</div>
+            </div>
+            <div class="pt-5">
+              <button class=" btn fw-bold px-4 mt-5 coll3">VIEW ALL GAMES</button>
+            </div>
+          </div>
+          <div class="container mt-5 pb-5">
+            <div class="row g-3 pb-5">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12 p-3">
+                <div class="game g1 text-light d-flex flex-column justify-content-between p-4"  onmouseenter=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Thunder and City</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12 p-3">
+                  <div class="game g2 text-light d-flex flex-column justify-content-between p-4"  onmouseover=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Mystic Raing Z</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12  p-3">
+                <div class="game g3 text-light d-flex flex-column justify-content-between p-4" onmouseover=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Slient Wrath</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12  p-3">
+                <div class="game g4 text-light d-flex flex-column justify-content-between p-4"  onmouseover=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Funk Dungeon</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>               
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12  p-3">
+                <div class="game g5 text-light d-flex flex-column justify-content-between p-4"  onmouseover=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Galactic Odyssey</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12  p-3">
+                <div class="game g6 text-light d-flex flex-column justify-content-between p-4"  onmouseover=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Warfare Legends</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12  p-3">
+                <div class="game g7 text-light d-flex flex-column justify-content-between p-4"  onmouseover=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Raceway Revolution</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12  p-3">
+                <div class="game g8 text-light d-flex flex-column justify-content-between p-4"  onmouseover=popup() onmouseleave=popdown()>
+                  <div class=" d-flex justify-content-end">
+                    <div class=" p-1 px-2 text-light rounded rounded-2" style="background-color: #ea13b0;font-weight: 650;">20% OFF</div>
+                  </div>
+                  <div class=" d-flex flex-column">
+                    <div class=" fs-5 fw-semibold">Starborn Odyssey</div>
+                    <div class="fs-6 mt-2">Starting At  <span class="blbg p-1  rounded rounded-1">$16.5</span></div>
+                    <button class=" btn mt-3 fw-bold rounded rounded-3 popbtn d-none">ORDER NOW</button>
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container my-5">
+          <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold text-light mb-5 mt-5 ques1">Do You Have</span>
+          <div class="display-4 mt-3 ques2">ANY QUESTIONS?</div>
+          <div class="row mb-5">
+            <div class="col-lg-6 col-12">
+              <div class="accordion" id="accordionFlushExample">
+               <div class="accordion-item mt-5 mb-4 rounded rounded-3 border-0 bg-transparent ques3" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">What is Game Hosting?</button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Game hosting involves renting or setting up servers to run multiplayer games, allowing players to connect and play together online. It ensures stable performance and reduces lag.</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques4" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsetwo">Why do I need game hosting?</button>
+                </h2>
+                <div id="flush-collapsetwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Game hosting provides a dedicated space for multiplayer gameplay, improves performance, and offers better control over settings and mods compared to peer-to-peer connections.</div>
+                </div>
+              </div>
+               <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques5" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsethree">How do I choose a game hosting provider?</button>
+                </h2>
+                <div id="flush-collapsethree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Consider factors like server locations, pricing, customer support, and scalability. Look for providers with good reviews and low latency for your region.</div>
+                </div>
+              </div>
+               <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques6" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour">What types of games can I host?</button>
+                </h2>
+                <div id="flush-collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">You can host various games, including FPS (e.g., CS:GO), RPGs (e.g., Minecraft), and MMOs, depending on the hosting provider’s supported titles.</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques7" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive">What is server latency or ping?</button>
+                </h2>
+                <div id="flush-collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Latency (ping) is the time it takes for data to travel between the server and your device. Lower ping means smoother gameplay with less delay.</div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="accordion" id="accordionFlushExample">
+               <div class="accordion-item mt-5 mb-4 rounded rounded-3 border-0 bg-transparent ques8" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsesix">How do I manage a game server?</button>
+                </h2>
+                <div id="flush-collapsesix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Use control panels provided by the hosting service or command-line tools. Tasks include restarting the server, updating games, and managing player access.</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques9" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseseven">Can I run mods on my game server?</button>
+                </h2>
+                <div id="flush-collapseseven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Yes, many hosting providers support mods, but check compatibility and whether manual or automatic installation is required.</div>
+                </div>
+              </div>
+               <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques10" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseeight">What is DDoS protection, and do I need it?</button>
+                </h2>
+                <div id="flush-collapseeight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">DDoS protection prevents attacks that overwhelm your server with traffic. It’s essential for uninterrupted gameplay, especially for popular servers.</div>
+                </div>
+              </div>
+               <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques11" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsenine">How much does game hosting cost?</button>
+                </h2>
+                <div id="flush-collapsenine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Costs vary based on game, server size, and provider, ranging from $5 to $100+ per month. Some providers offer pay-as-you-go plans</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-4 rounded rounded-3 border-0 bg-transparent ques12" >
+                <h2 class="accordion-header rounded rounded-3 text-light border-0" style="background-color: #282a2c;">
+                  <button class="accordion-button collapsed rounded  bg-transparent rounded-3 text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseten">Is there 24/7 customer support?</button>
+                </h2>
+                <div id="flush-collapseten" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body text-light">Many reputable providers offer 24/7 support via live chat, email, or tickets. Check reviews to ensure prompt and helpful service.</div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class=" container my-5 py-5">
+          <div class="row bg1 mt-5 text-light d-flex position-relative start0" style="min-height: 40vh;background: url(images/background/2.webp);">
+            <div class="col-xl-7 col-12 d-flex flex-column justify-content-center align-items-start ps-5 row-gap-3 py-5">
+              <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold start1">DOWNLOAD NOW</span>
+              <div class="display-4 start2 start2 ">MANAGE YOUR SERVER<br>FROM MOBILE DEVICE</div>
+              <div class="fs-5 text-white-50 start3">amet consectetur adipisicing elit. Harum, ullam. Modi officiis distinctio facilis ipsa, impedit qui doloribus perferendis nihil nobis dolorem unde aut. Soluta inventore voluptatum obcaecati quibusdam suscipit odio vitae, neque</div>
+              <div class="d-flex column-gap-4 start4">
+                <img src="images/misc/download-appstore.webp">
+                <img src="images/misc/download-playstore.webp">
+              </div>
+            </div>
+            <div class="col-xl-5  d-flex justify-content-end position-relative avatar">
+              <img src="images/misc/man-with-phone.webp" class="position-absolute img2 start5">
+            </div>
+          </div>
+        </div>
+        <div class="container my-5 pb-5">
+          <div class="row my-5 d-flex pb-5">
+            <div class="col-lg-4 col-12">
+              <span class="fs-6 border border-1 border-light p-2 rounded-pill px-4 fw-bold text-light pay1">PAYMENTS METHOS</span>
+              <div class="display-3 my-3 pay2">WE ACCEPT</div>
+            </div>
+            <div class="col-lg-8 col-12 d-flex align-items-center">
+              <div class="row d-flex justify-content-start justify-content-lg-between row-gap-4">
+                <div class="col-lg-2 col-4">
+                  <img src="images/payments/jcb.webp" class=" img img-fluid   bg-dark rounded rounded-3 px-2 pay3">
+                </div>
+                <div class="col-lg-2 col-4">
+                  <img src="images/payments/mastercard.webp" class="img img-fluid   bg-dark rounded rounded-3 px-2  pay4">
+                </div>
+                <div class="col-lg-2 col-4">
+                  <img src="images/payments/paypal.webp" class="img img-fluid   bg-dark rounded rounded-3 px-2  pay5">
+                </div>
+                <div class="col-lg-2 col-4">
+                  <img src="images/payments/skrill.webp" class="img img-fluid   bg-dark rounded rounded-3 px-2  pay6">
+                </div>
+                <div class="col-lg-2 col-4">
+                  <img src="images/payments/visa.webp" class="img img-fluid   bg-dark rounded rounded-3 px-2  pay7">
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer style="min-height: 40vh;" class=" bg-black border border-0 border-top d-flex align-items-center mb-5 pb-5">
+        <div class="container">
+          <div class="row d-flex row-gap-4 pt-5">
+            <div class="col-lg-4 col-md-8 foot1">
+              <img src="images/logo.png" class=" mb-4">
+              <div class="fs-6 text-white-50">consectetur adipisicing elit. Debitis voluptatum fugit culpa eum esse? Sequi tempore reprehenderit eveniet explicabo, soluta in vel unde temporibus quia esse tempora dolor vitae cupiditate nobis, inventore ipsam ab ratione. Delectus officia explicabo illo cupiditate iusto</div>
+            </div>
+            <div class="col-lg-2 col-md-4 text-white-50 d-flex flex-column row-gap-2 foot2">
+              <div class=" text-white mb-3 fw-bold">Game Server</div>
+              <div>Thunder and City</div>
+              <div>Mystic Racing Z</div>
+              <div>Silent Wrath</div>
+              <div>Funk Dungeon</div>
+              <div>Galactic Odyssey</div>
+              <div>Warfare Legend</div>
+            </div>
+          <div class="col-lg-2 col-md-4 text-white-50 d-flex flex-column row-gap-2 foot3">
+            <div class="text-white mb-3 fw-bold">Pages</div>
+            <div>Game Server</div>
+            <div>Knowledgebase</div>
+            <div>About Us</div>
+            <div>Affiliates</div>
+            <div>Locations</div>
+            <div>News</div>
+          </div>
+          <div class="col-lg-4 col-md-8 foot4">
+            <div class="text-white mb-3 fw-bold">News Letter</div>
+            <form class=" input-group rounded rounded-4 mb-4">
+              <input class="form-control bg-dark border-0" placeholder="Enter Your Email" style="color: white;">
+              <button class=" btn px-4">$</button>
+            </form>
+            <div class="text-white mb-3 fw-bold">Follow Us On</div>
+            <div class="d-flex column-gap-4">
+              <i class="bi bi-facebook fs-5 bg-dark p-2 rounded rounded-2 px-3" style="color:#502dbd;"></i>
+              <i class="bi bi-twitter fs-5 bg-dark p-2 rounded rounded-2 px-3" style="color:#502dbd;"></i>
+              <i class="bi bi-discord fs-5 bg-dark p-2 rounded rounded-2 px-3" style="color:#502dbd;"></i>
+              <i class="bi bi-tiktok fs-5 bg-dark p-2 rounded rounded-2 px-3" style="color:#502dbd;"></i>
+              <i class="bi bi-youtube fs-5 bg-dark p-2 rounded rounded-2 px-3" style="color:#502dbd;"></i>
+            </div>
+          </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <footer>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+   
+
+      let nav=document.querySelector("nav")
+     function popup()
+     {
+      let parent=event.target;
+      let btn=parent.querySelector(".popbtn")
+      console.log(btn)
+      btn.classList.remove("animepopdown")
+      if(btn)
+     {
+      btn.classList.add("animepopup")
+      btn.classList.remove("d-none")
+     }
+     }
+     function popdown()
+     {
+      let parent=event.target;
+      let btn=parent.querySelector(".popbtn")
+      console.log(btn)
+      if(btn)
+     {
+      btn.classList.remove("animepopup")
+      btn.classList.add("animepopdown")
+      setTimeout(()=>{
+        btn.classList.add("d-none")
+      },500)
+     }
+     }
+     window.addEventListener("scroll",()=>{
+      console.log(window.scrollY)
+      if(window.scrollY>1000)
+     {
+      nav.style.backgroundColor="black"
+     }
+     else
+     {
+      nav.style.backgroundColor="transparent"
+     }
+     })
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      grabCursor: true,
+      centeredSlides: true,
+      autoplay:{
+        delay:3000,
+      },
+      slidesPerView: "auto",
+      loop:true,
+      speed:1300,
+      coverflowEffect: {
+        rotate: 100,
+        stretch: 100,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+    
+    });
+    var swiper = new Swiper(".mySwiper2", {
+      effect: "coverflow",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop:true,
+      speed:1500,
+      autoplay:
+    {
+      delay:2000
+    },
+      coverflowEffect: {
+        rotate: 0,
+        stretch: -70,
+        depth:350,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+ el: '.swiper-pagination',
+ type: 'bullets',
+ clickable: true,
+}
+    });
+    const sr=ScrollReveal(
+      {
+        origin:'top',
+        distance:'100px',
+        reset:true,
+        delay:300,
+        duration:1500,
+        reset:true,
+        useDelay:'once',
+      }
+    )
+    sr.reveal('.feat1',{distance:'100px'})
+    sr.reveal('.feat2',{delay:400,distance:'100px'})
+    sr.reveal('.feat3',{delay:600,origin:'left'})
+    sr.reveal('.feat4',{delay:700,origin:'left',distance:'600px',duration:1600})
+    sr.reveal('.feat5',{delay:800,origin:'left',distance:'1100px',duration:1700})
+    sr.reveal('.feat6',{delay:900,origin:'left',distance:'1600px',duration:1800})
+    sr.reveal('.start0',{delay:400,distance:'100px'})
+    sr.reveal('.start1',{delay:500,distance:'100px'})
+    sr.reveal('.start2',{delay:600,distance:'100px'})
+    sr.reveal('.start3',{delay:700,distance:'100px'})
+    sr.reveal('.start4',{delay:800,distance:'100px'})
+    sr.reveal('.start5',{delay:900,distance:'100px',origin:'right'})
+    sr.reveal('.review1',{delay:300,distance:'100px'})
+    sr.reveal('.review2',{delay:600,distance:'200px'})
+    sr.reveal('.review3',{delay:900,distance:'300px'})
+    sr.reveal('.loc1',{origin:'left'})
+    sr.reveal('.loc2',{delay:500,origin:'top'})
+    sr.reveal('.loc3',{delay:700,origin:'top'})
+    sr.reveal('.loc4',{delay:900,origin:'top'})
+    sr.reveal('.loc5',{delay:1100,origin:'left',distance:'300px'})
+    sr.reveal('.loc6',{delay:1200,origin:'left',distance:'400px',duration:1600})
+    sr.reveal('.loc7',{delay:1300,origin:'left',distance:'500px',duration:1700})
+    sr.reveal('.loc8',{delay:1400,origin:'left',distance:'300px',duration:1800})
+    sr.reveal('.loc9',{delay:1500,origin:'left',distance:'400px',duration:1900})
+    sr.reveal('.loc10',{delay:1600,origin:'left',distance:'500px',duration:2000})
+    sr.reveal('.coll1',{delay:300,origin:'top'})
+    sr.reveal('.coll2',{delay:400,origin:'top'})
+    sr.reveal('.coll3',{delay:500,origin:'top'})
+    sr.reveal('.g1',{delay:700,origin:'left',distance:'400px',duration:1600})
+    sr.reveal('.g2',{delay:900,origin:'left',distance:'600px',duration:1800})
+    sr.reveal('.g3',{delay:700,origin:'right',distance:'400px',duration:1600})
+    sr.reveal('.g4',{delay:900,origin:'right',distance:'600px',duration:1800})
+    sr.reveal('.g5',{delay:700,origin:'left',distance:'400px',duration:1600})
+    sr.reveal('.g6',{delay:900,origin:'left',distance:'600px',duration:1800})
+    sr.reveal('.g7',{delay:700,origin:'right',distance:'400px',duration:1600})
+    sr.reveal('.g8',{delay:900,origin:'right',distance:'600px',duration:1800})
+    sr.reveal('.ques1',{delay:300})
+    sr.reveal('.ques2',{delay:400})
+    sr.reveal('.ques3',{delay:600})
+    sr.reveal('.ques4',{delay:900})
+    sr.reveal('.ques5',{delay:1200})
+    sr.reveal('.ques6',{delay:1500})
+    sr.reveal('.ques7',{delay:1800})
+    sr.reveal('.ques8',{delay:600})
+    sr.reveal('.ques9',{delay:900})
+    sr.reveal('.ques10',{delay:1200})
+    sr.reveal('.ques11',{delay:1500})
+    sr.reveal('.ques12',{delay:1800})
+    sr.reveal('.pay1',{delay:300})
+    sr.reveal('.pay2',{delay:400})
+    sr.reveal('.pay3',{delay:600,origin:'left'})
+    sr.reveal('.pay4',{delay:900,origin:'left',distance:'200px'})
+    sr.reveal('.pay5',{delay:1200,origin:'left',distance:'300px'})
+    sr.reveal('.pay6',{delay:1500,origin:'left',distance:'400px'})
+    sr.reveal('.pay7',{delay:1700,origin:'left',distance:'500px'})
+    sr.reveal('.foot1',{delay:300,origin:'left',distance:'400px',duration:1000})
+    sr.reveal('.foot2',{delay:500,origin:'left',distance:'600px',duration:1300})
+    sr.reveal('.foot3',{delay:300,origin:'right',distance:'400px',duration:1000})
+    sr.reveal('.foot4',{delay:500,origin:'right',distance:'600px',duration:1300})   
+  </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
