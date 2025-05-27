@@ -256,6 +256,10 @@ color: white !important;
       cursor: pointer;
       border: 6px solid #502dbd;
     }
+    section
+    {
+      overflow-x: hidden;
+    }
     
 .accordion-button::after
 {
@@ -287,7 +291,7 @@ input::placeholder
 
   <body class=" bg-black">
     <header class="">
-      <nav class="navbar navbar-expand-lg fs-5 nav-underline text-light fixed-top top-0">
+      <nav class="navbar navbar-expand-lg fs-5 nav-underline text-light fixed-top top-0" style="width: 100vw;">
         <div class=" container" >
           <a href="#" class=" navbar-brand">
               <img class=" img-fluid w-75" src="images/logo.png">
@@ -759,14 +763,14 @@ input::placeholder
           </div>
         </div>
       </section>
-      <footer style="min-height: 40vh;" class=" bg-black border border-0 border-top d-flex align-items-center mb-5 pb-5">
-        <div class="container">
-          <div class="row d-flex row-gap-4 pt-5">
-            <div class="col-lg-4 col-md-8 foot1">
+      <footer style="min-height: 40vh;overflow-x: hidden;" class=" bg-black border border-0 border-top d-flex align-items-center mb-5 pb-5">
+        <div class="container mb-5">
+          <div class="row d-flex row-gap-4 pt-5 flex-wrap">
+            <div class="col-lg-4 col-md-8 col-12 foot1">
               <img src="images/logo.png" class=" mb-4">
               <div class="fs-6 text-white-50">consectetur adipisicing elit. Debitis voluptatum fugit culpa eum esse? Sequi tempore reprehenderit eveniet explicabo, soluta in vel unde temporibus quia esse tempora dolor vitae cupiditate nobis, inventore ipsam ab ratione. Delectus officia explicabo illo cupiditate iusto</div>
             </div>
-            <div class="col-lg-2 col-md-4 text-white-50 d-flex flex-column row-gap-2 foot2">
+            <div class="col-lg-2 col-md-4  col-12  text-white-50 d-flex flex-column row-gap-2 foot2">
               <div class=" text-white mb-3 fw-bold">Game Server</div>
               <div>Thunder and City</div>
               <div>Mystic Racing Z</div>
@@ -775,7 +779,7 @@ input::placeholder
               <div>Galactic Odyssey</div>
               <div>Warfare Legend</div>
             </div>
-          <div class="col-lg-2 col-md-4 text-white-50 d-flex flex-column row-gap-2 foot3">
+          <div class="col-lg-2 col-md-4  col-12  text-white-50 d-flex flex-column row-gap-2 foot3">
             <div class="text-white mb-3 fw-bold">Pages</div>
             <div>Game Server</div>
             <div>Knowledgebase</div>
@@ -784,7 +788,7 @@ input::placeholder
             <div>Locations</div>
             <div>News</div>
           </div>
-          <div class="col-lg-4 col-md-8 foot4">
+          <div class="col-lg-4 col-md-8  col-12  foot4">
             <div class="text-white mb-3 fw-bold">News Letter</div>
             <form class=" input-group rounded rounded-4 mb-4">
               <input class="form-control bg-dark border-0" placeholder="Enter Your Email" style="color: white;">
